@@ -1,0 +1,351 @@
+/* HAMBURGER MENU */
+@media (max-width: 720px) {
+     /* NAVBAR */
+   .header-home input, 
+   .header-about input{
+    display: flex;
+  }
+    .hamburger {
+    display: flex;
+  }
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* HAMBURGER LINE - MIDDLE */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #f4f3f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* HAMBURGER LINES - TOP & BOTTOM */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  
+  /* MOVES LINE DOWN */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  /* TOGGLER ANIMATION */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  /* TURNS LINES INTO X */
+  .menu-wrap .toggler:checked + .hamburger > div:before, .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  /* ROTATE ON HOVER WHEN CHECKED */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  /* SHOW MENU */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.06s;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.35s ease 0.2s;
+  }
+  
+  /* STYLING HOME-ABOUT-GALLERY-CONTACT */
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .menu > div {
+    background: rgba(0, 0, 0, 3);
+    width: 300vw;
+    height: 300vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #f4f3f2;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: var(--third-color);
+  }
+  
+/* SOCIALS NAVBAR */
+#socials {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+ }
+}
+
+
+
+/* PHONE */
+@media (max-width: 485px) {
+
+  /* MAIN */
+  #logo2 {
+    margin-top: 4rem;
+    width: auto;
+    height: 325px;
+  }
+  .queenstown {
+    font-size: 1rem;
+  }
+
+
+    /* FLEX PICTURES */
+    .flex-columns .row,
+    .flex-columns .column {
+        display: inline;
+      }
+
+    .flex-columns .column-2 {
+        margin-top: 3rem;
+    }
+    .flex-columns .column-1 {
+        display: none;
+      }
+
+    .flex-columns .column-grid {
+        display: none;
+      }
+
+    .lower-text-padding {
+        padding-top: 1rem;
+      }
+    
+     /* BREAK PICTURE */
+    .break-picture {
+        height: 50vh;
+        margin-top: 3rem;
+      }
+
+    .quote p {
+        font-size: 1.3rem;
+      }
+      
+    /* CONTACT FORM */
+    .contact {
+        padding-top: 3rem;
+      }
+    #form-right {
+        float: left;
+      }
+
+    /* ABOUT */
+    .break-picture-about {
+        height: 23vh;
+        margin: 3rem 0 0 0;
+      }
+
+    #clients .logos {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    #clients .logos img {
+        width: 20%;
+        margin: 1rem 1rem 0 0;
+      }
+
+    .working-form {
+        margin: auto;
+    }
+    #form-work {
+        display: inline-block;
+    }
+
+    /* TEAM PICTURES */
+    .column-team {
+        margin: 1rem;
+        padding-top: 1rem;
+      }
+
+} 
+
+
+/* TABLETS */
+@media (min-width: 486px) and (max-width: 768px) {
+
+/* MAIN*/
+.content {
+    text-align: center;
+    padding-top: 11rem;
+}
+
+.content h1 {
+    font-size: 4rem;
+    text-align: center;
+} 
+
+.content .fungi {
+    font-size: 2.2rem;
+    top: -50px;
+    left: 90px;
+}
+.content .mush {
+    position: relative;
+    top: 20px;
+    left: 0px;
+} 
+        
+/* FLEX PICTURES */
+.flex-columns .row,
+.flex-columns .column {
+    display: inline;
+  }
+
+.flex-columns .column-2 {
+    margin-top: 3rem;
+}
+.flex-columns .column-1 {
+    display: none;
+  }
+
+.flex-columns .column-grid {
+    display: none;
+  }
+
+.lower-text-padding {
+    padding-top: 1rem;
+  }
+
+ /* BREAK PICTURE */
+.break-picture {
+    height: 50vh;
+    margin-top: 3rem;
+  }
+
+.quote p {
+    font-size: 1.3rem;
+  }
+  
+/* CONTACT FORM */
+.contact {
+    padding-top: 3rem;
+  }
+#form-right {
+    float: left;
+  }
+
+/* ABOUT */
+.break-picture-about {
+    height: 23vh;
+    margin: 3rem 0 0 0;
+  }
+
+#clients .logos {
+    display: inline-block;
+    margin: 0 auto;
+  }
+#clients .logos img {
+    width: 20%;
+    margin: 1rem 1rem 0 0;
+  }
+
+.working-form {
+    margin: auto;
+}
+#form-work {
+    display: inline-block;
+}
+
+/* TEAM PICTURES */
+.column-team {
+    margin: 1rem;
+    padding-top: 1rem;
+  } 
+  
+}
+
+
+/* SMALLER SCREENS */
+@media (min-width: 769px) and (max-width: 992px) {
+    .two-pictures .column-1 img{
+        height: 600px;
+        width: 178px;
+      }
+      
+
+}
